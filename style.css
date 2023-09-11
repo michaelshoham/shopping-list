@@ -1,0 +1,12 @@
+body {
+    background: wheat;
+}
+h1 {
+    color:navy;
+}
+
+#line {
+    width: 170px;
+    background: whitesmoke;
+    color: navy;
+}
