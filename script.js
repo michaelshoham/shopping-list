@@ -3,11 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const add = document.querySelector("button")
     const input = document.querySelector("input");
     const line = document.querySelector("#line")
+    let records = []
 
 
     function addToList() {
-        let counter = 0
         let newRecord = input.value
+        records.push(newRecord)
         let newspan = document.createElement("span");
 
 
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // let br = document.createElement("br")
         // line.appendChild(br)
-        
+
         let hr = document.createElement("hr")
         line.appendChild(hr)
 
@@ -38,7 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     add.addEventListener("click", () => {
-        if(input.value.length > 0)
+        
+        if(input.value.trim().length > 0 && !records.includes(input.value))
         addToList();
     })
 
