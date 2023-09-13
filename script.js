@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         if(input.value.trim().length > 0 && !records.includes(input.value))
         addToList();
+        input.value = ""
     })
 
 
